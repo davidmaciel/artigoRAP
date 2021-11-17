@@ -5,8 +5,7 @@ Authors@R:
     person("David", "Mello Neto", , "davidmaciel2206@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "https://orcid.org/0000-0002-2391-1312"))
 Description: Registro de pesquisa sobre Conselhos Participativos em Campos dos Goytacazes, RJ.
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+License: CC BY 4.0
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)

@@ -33,8 +33,8 @@ nodes <- bind_rows(conselhos, conselheiros) %>%
 edges <- cons %>% select("from" = conselho, "to" = conselheiro)
 grafo <- graph_from_data_frame(edges, directed = F, vertices = nodes)
 projes <- grafo %>% bipartite.projection()
-conselhosXconselhos <- projes$proj2 %>% igraph::as_data_frame("edges")
-conselheirosXconselheiros <- projes$proj1 %>% igraph::as_data_frame("edges")
-write_csv2(conselhosXconselhos, file = "data-raw/sources/conselhosXconselhos.csv")
-write_csv2(conselheirosXconselheiros, file = "data-raw/sources/conselheirosXconselheiros.csv")
-usethis::use_data(conselhosXconselheiros, overwrite = TRUE)
+conselhosXconselhos <- projes$proj2
+conselheirosXconselheiros <- projes$proj1
+
+use_data(conselhosXconselhos, overwrite = T)
+use_data(conselheirosXconselheiros, overwrite = T)

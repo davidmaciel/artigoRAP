@@ -38,3 +38,9 @@ conselheirosXconselheiros <- projes$proj1
 
 use_data(conselhosXconselhos, overwrite = T)
 use_data(conselheirosXconselheiros, overwrite = T)
+
+as_data_frame(conselhosXconselhos, whate = "edges") %>%
+  write_csv2("data-raw/sources/conselhosXconselhos.csv")
+as_data_frame(conselheirosXconselheiros, whate = "edges") %>%
+  write_csv2("data-raw/sources/conselheirosXconselheiros.csv")
+

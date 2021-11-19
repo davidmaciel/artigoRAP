@@ -8,8 +8,7 @@ Saúde;Assistência social;1
 Saúde;Direitos da mulher;1
 Saúde;Promoção da igualdade racial;1
 Saúde;Alimentação escolar;1
-Saúde;"Conselho deliberativo do instituto de previdência dos servidores do
-Município de campos dos goytacazes - previcampos";1
+Saúde;previcampos;1
 Saúde;Combate à corrupção;1
 Educação;Preservação do patrimônio histórico e cultural;2
 Educação;Direitos da mulher;1
@@ -18,7 +17,7 @@ Educação;Alimentação escolar;4
 Educação;Gestor do fundecam;1
 Educação;Direitos do idoso;1
 Educação;Cultura;1
-Educação;Acompanhamento e controle social do fundo de manutenção e desenvolvimento da educação básica e de valorização dos profissionais da educação;5
+Educação;fundeb;5
 Assistência social;Criança e adolescente;2
 Assistência social;Direitos do idoso;3
 Assistência social;Segurança alimentar e nutricional;2
@@ -50,7 +49,7 @@ Cultura;Turismo;2
 Cultura;Promoção da igualdade racial;3
 Cultura;Combate à corrupção;2
 Alimentação escolar;Gestor do fundecam;1
-Alimentação escolar;Acompanhamento e controle social do fundo de manutenção e desenvolvimento da educação básica e de valorização dos profissionais da educação;2
+Alimentação escolar;fundeb;2
 Alimentação escolar;Política agrícola e pecuária;1
 Alimentação escolar;Combate à corrupção;1
 Meio ambiente e saneamento;Política agrícola e pecuária;4
@@ -60,17 +59,14 @@ Meio ambiente e saneamento;Preservação do patrimônio histórico e cultural;2
 Meio ambiente e saneamento;Defesa do consumidor;2
 Política agrícola e pecuária;Gestor do fundecam;3
 Política agrícola e pecuária;Promoção da igualdade racial;2
-Política agrícola e pecuária;Acompanhamento e controle social do fundo de manutenção e desenvolvimento da educação básica e de valorização dos profissionais da educação;1
+Política agrícola e pecuária;fundeb;1
 Política agrícola e pecuária;Defesa do consumidor;2
-Promoção da igualdade racial;"Conselho deliberativo do instituto de previdência dos servidores do
-Município de campos dos goytacazes - previcampos";1
+Promoção da igualdade racial;previcampos;1
 Preservação do patrimônio histórico e cultural;Turismo;1
 Preservação do patrimônio histórico e cultural;Combate à corrupção;1
 Preservação do patrimônio histórico e cultural;Gestor do fundecam;1
 Preservação do patrimônio histórico e cultural;Defesa do consumidor;1
 Combate à corrupção;Gestor do fundecam;2
-Combate à corrupção;"Conselho deliberativo do instituto de previdência dos servidores do
-Município de campos dos goytacazes - previcampos";1
+Combate à corrupção;previcampos;1
 Defesa do consumidor;Gestor do fundecam;1
-"Conselho deliberativo do instituto de previdência dos servidores do
-Município de campos dos goytacazes - previcampos";Gestor do fundecam;1
+previcampos;Gestor do fundecam;1

@@ -45,9 +45,10 @@ projes <- grafo %>% bipartite.projection()
 conselhosXconselhos <- projes$proj2
 conselheirosXconselheiros <- projes$proj1
 
+conselhosXconselheiros <- grafo
 use_data(conselhosXconselhos, overwrite = T)
 use_data(conselheirosXconselheiros, overwrite = T)
-
+use_data(conselhosXconselheiros, overwrite = T)
 as_data_frame(conselhosXconselhos, what = "edges") %>%
   write_csv2("data-raw/sources/conselhosXconselhos.csv")
 

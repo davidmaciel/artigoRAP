@@ -132,7 +132,13 @@ visnet <- visNetwork(nodes, edges) %>%
   visInteraction(dragView = T, zoomView = T)
 
 
-## exportar resultados -----------------------------------------------------
+
+
+# grafico do mds ----------------------------------------------------------
+ggplot(sh_conselheiros, aes(x =  Constraint, y = EffSize, col = factor(grupo))) +
+  geom_point(alpha = 0.7)
+
+# exportar resultados -----------------------------------------------------
 if(!"results" %in% dir("data-raw/")){
   dir.create("data-raw/results/")
 }

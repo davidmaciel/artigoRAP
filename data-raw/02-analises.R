@@ -35,7 +35,27 @@ data("conselheirosXconselheiros")
 data("conselhosXconselhos")
 data("conselhosXconselheiros")
 sh_conselheiros <- read.csv2("data-raw/sources/conselheiros-SH.CSV")
-sh_conselhos  <- read.csv2("data-raw/sources/conselhos-SH.CSV")
+
+conselheiros_class <-
+  read.csv2("data-raw/sources/classificado.CSV") %>%
+  select(conselheiro,setor) %>%
+  mutate(setor = str_trim(setor) %>%
+           str_squish() %>% str_to_lower(locale = "por") %>%
+           str_replace("púbico","público") %>%
+           str_replace("terceiro setor", "sociedade civil")) %>%
+  distinct() %>%
+  group_by(conselheiro) %>%
+  summarise(setor = str_c(setor, collapse = ";")) %>%
+  ungroup() %>%
+  mutate(setor = case_when(
+    setor == "sociedade civil;poder público" ~
+      "poder público;sociedade civil",
+    setor == "sociedade civil;mercado" ~
+      "mercado;sociedade civil" ,
+    T ~ setor
+  ))
+sh_conselheiros <- inner_join(sh_conselheiros, conselheiros_class,
+                              by = c("ID" = "conselheiro"))
 par(mar=c(1,1,1,1))
 # conselheiros ---------------------------------------------------------------
 
@@ -84,7 +104,7 @@ rotulo <- function(name, conselhos,n_con, effsize, efficiency,
              <b>hierarchy:</b> {hierarchy}")
 }
 
-n_grupos <- unique(sh_conselheiros$grupo) %>% length()
+n_grupos <- unique(sh_conselheiros$setor) %>% length()
 paleta <- RColorBrewer::brewer.pal(n_grupos, "Set1")
 coordenadas <- tibble(name = V(conselheirosXconselheiros)$name) %>%
   bind_cols(as.data.frame(layout.kamada.kawai(conselheirosXconselheiros))) %>%
@@ -100,7 +120,8 @@ nodes <- conselhosXconselheiros %>%
   mutate("id" = 1:nrow(.),
          "title" = rotulo(name,conselhos,n_con, EffSize,
                           Efficiency,Constraint,Hierarchy),
-         "color.background" = paleta[.$grupo],
+         "shape" = grupo,
+         "color.background" = paleta[.$setor],
          "color.border" = "black",
          "borderWidth" = 1,
          "size" = n_con*10) %>%

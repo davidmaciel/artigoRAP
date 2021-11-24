@@ -54,3 +54,4 @@ as_data_frame(conselhosXconselhos, what = "edges") %>%
 
 as_data_frame(conselheirosXconselheiros, what = "edges") %>%
   write_csv2("data-raw/sources/conselheirosXconselheiros.csv")
+
